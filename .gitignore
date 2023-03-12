@@ -1,0 +1,9 @@
+dataset
+cropped
+custom
+shape_predictor_68_face_landmarks.dat
+lip_model_cnn_lstm.h5
+lip_model_cnn_lstm_weights.h5
+splits
+
+
