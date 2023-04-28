@@ -16,6 +16,8 @@ import shutil
 st.title('Lip README') 
 
 
+# Generate two columns 
+col1, col2 = st.columns(2)
 
 
 
@@ -85,11 +87,25 @@ if uploaded_video is not None:
     save_uploaded_file(uploaded_video)
     selected_video = uploaded_video
 
+    
+
 
 print(uploaded_video.name)
 
 save_frames =r"custom"
 video_path = fr"custom\{uploaded_video.name}"
+
+
+with col1: 
+    st.info('This is the uploaded video')
+    file_path = video_path 
+    
+
+    # Rendering inside of the app
+    video = open(file_path, 'rb') 
+    video_bytes = video.read() 
+    st.video(video_bytes)
+
 
 
 save_frame(video_path, save_frames, gap=5)
@@ -195,21 +211,19 @@ print(predicted_words)
 
 
 
-# Generate two columns 
-col1, col2 = st.columns(2)
 
 
 
 # Rendering the video 
-with col1: 
-    st.info('This is the uploaded video')
-    file_path = video_path 
+# with col1: 
+#     st.info('This is the uploaded video')
+#     file_path = video_path 
     
 
-    # Rendering inside of the app
-    video = open(file_path, 'rb') 
-    video_bytes = video.read() 
-    st.video(video_bytes)
+#     # Rendering inside of the app
+#     video = open(file_path, 'rb') 
+#     video_bytes = video.read() 
+#     st.video(video_bytes)
 
 
 with col2: 

@@ -1,0 +1,12 @@
+numpy == 1.24.1
+pandas == 1.5.3
+imutils == 0.5.4
+dlib == 19.24.0
+imageio == 2.25.0
+opencv-python == 4.7.0.68
+tensorflow == 2.10.1
+matplotlib == 3.6.3
+
+
+
+
