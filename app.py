@@ -11,9 +11,12 @@ import cv2
 import imutils
 import dlib
 from imutils import face_utils
-
+import shutil
 
 st.title('Lip README') 
+
+
+
 
 
 
@@ -52,6 +55,13 @@ def save_frame(video_path, save_dir, gap=1):
 
         idx += 1
 
+
+
+
+if os.path.exists(r'custom\frames'):
+    shutil.rmtree(r'custom\frames')
+if os.path.exists(r'custom\cropped'):
+    shutil.rmtree(r'custom\cropped')
 
 
 if not os.path.exists(r'custom'):
@@ -203,24 +213,51 @@ with col1:
 
 
 with col2: 
-    # st.info('This is all the machine learning model sees when making a prediction')
+    # st.info('This is all the model sees when making a prediction')
     # video = load_data(tf.convert_to_tensor(file_path))
-    # # video, annotations = load_data(tf.convert_to_tensor(file_path))
+  
     # imageio.mimsave('animation.gif', video, fps=10)
     # st.image('animation.gif', width=400) 
 
-    # st.info('This is the output of the machine learning model as tokens')
-    # model = load_model()
-    # yhat = model.predict(tf.expand_dims(video, axis=0))
-    # decoder = tf.keras.backend.ctc_decode(yhat, [75], greedy=True)[0][0].numpy()
-    # st.text(decoder)
 
-    # # Convert prediction to text
-    # st.info('Decode the raw tokens into words')
-    # converted_prediction = tf.strings.reduce_join(num_to_char(decoder)).numpy().decode('utf-8')
-    # st.text(converted_prediction)
+
+ 
+
+
+
 
     st.info('This is output ')
     
     st.text(predicted_words[0])
+
+
+
+        
+    # # Define the codec and create VideoWriter object
+    # fourcc = cv2.VideoWriter_fourcc(*'mp4v') # You can change the codec to the desired format
+    # out = cv2.VideoWriter('movements.mp4', fourcc, 24.0, (640, 480)) # Change the output file name and resolution
+
+    # # Path of the frames
+    # frames_path = directory
+
+    # # Iterate through all the frames
+    # for frame_name in os.listdir(frames_path):
+    #     frame = cv2.imread(os.path.join(frames_path, frame_name))
+    #     out.write(frame)
+
+
+
+
+    # st.info('This is lip movements')
+    # file_path = 
     
+
+    # # Rendering inside of the app
+    # video = open(file_path, 'rb') 
+    # video_bytes = video.read() 
+    # st.video(video_bytes)
+    
+    
+
+
+
