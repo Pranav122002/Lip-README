@@ -34,7 +34,8 @@ Download dataset folder and shape_predictor_68_face_landmarks.dat file and place
 <img src="Images/cropped.png" >
 
 ## Demo video
-<video src='Images/demo.mp4'>
+![Demo Video]("Images/demo.mp4")
+
 
 ## Tools used
 * Python
