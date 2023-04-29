@@ -21,9 +21,8 @@ pip install -r requirements.txt
 Download Miracle-vc1 dataset from:
 ```
 https://sites.google.com/site/achrafbenhamadou/-datasets/miracl-vc1
-
-Download dataset folder and shape_predictor_68_face_landmarks.dat file and place both in main project folder
 ```
+Download dataset folder and shape_predictor_68_face_landmarks.dat file and place both in main project folder
 
 
 ## Folder structure 
@@ -35,7 +34,7 @@ Download dataset folder and shape_predictor_68_face_landmarks.dat file and place
 <img src="Images/cropped.png" >
 
 ## Demo video
-<video src='Images/demo.mkv'>
+<video src='Images/demo.mp4'>
 
 ## Tools used
 * Python
