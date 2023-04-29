@@ -1,19 +1,30 @@
 # Lip-README
-Lip-README gives text as output by speech detected by lips from a video as input using Deep Learning.
+Lip-README gives predicted spoken word as text as output by speech detected by only lip movements from a video as input using Deep Learning.
 
 ## Installation & Running 
 Clone the project:
 ```
-git clone https://github.com/Pranav122002/Lip-README-DL.git
+git clone https://github.com/Pranav122002/Lip-README.git
+```
+Go to project folder:
+```
+cd .\Lip-README\
 ```
 Install requirements:
 ```
-pip install numpy pandas imutils dlib opencv-python tensorflow
+pip install numpy pandas imutils dlib opencv-python tensorflow imageio matplotlib
+```
+or
+```
+pip install -r requirements.txt
 ```
 Download Miracle-vc1 dataset from:
 ```
 https://sites.google.com/site/achrafbenhamadou/-datasets/miracl-vc1
+
+Download dataset folder and shape_predictor_68_face_landmarks.dat file and place both in main project folder
 ```
+
 
 ## Folder structure 
 <img src="Images/labels.png" >
@@ -23,13 +34,14 @@ https://sites.google.com/site/achrafbenhamadou/-datasets/miracl-vc1
 <img src="Images/cropped_structure.png" >
 <img src="Images/cropped.png" >
 
-View other images of folder structure in images folder
+## Demo video
+<video src='Images/demo.mkv'>
+
 ## Tools used
 * Python
 * Tensorflow
 * OpenCV
 * Jupyter Notebook
+* Streamlit
 
 
-## Demo images
-<!-- To view more demo images go to demo folder of this repo -->
