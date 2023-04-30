@@ -1,5 +1,6 @@
 # Lip-README
-Lip-README gives predicted spoken word as text as output by speech detected by only lip movements from a video as input using Deep Learning.
+* Lip-README gives predicted spoken word as text as output by speech detected by using only lip movements from a video as input using Deep Learning.
+* Convolutional neural network (CNN) and Long short-term memory (LSTM) models are used to apply deep learning techniques to generate speech from silent lip movements.
 
 ## Installation & Running 
 Clone the project:
