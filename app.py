@@ -190,9 +190,13 @@ with st.spinner('Wait for it, processing...'):
         images = []
 
         for filename in image_files:
-            images.append(imageio.imread(filename))
+            image = imageio.imread(filename)
+            image1 = resize(image, (MAX_WIDTH, MAX_HEIGHT))
+            image2 = 255 * image1
+            images.append(image2)
 
-        imageio.mimsave("custom/animation.gif", images, fps=10)
+        # imageio.mimsave("custom/animation.gif", images, fps=10)
+        imageio.mimsave("custom/animation.gif", images, duration=10)
 
         st.info('This is what the model sees for making prediction ')
         st.image("custom/animation.gif", width=400)
